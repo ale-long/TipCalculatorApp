@@ -2,7 +2,7 @@
 
 **Tippy** is a tip calculator application for iOS.
 
-Submitted by: **Alex Long **
+Submitted by: **Alex Long**
 
 Time spent: **X** hours spent in total
 
