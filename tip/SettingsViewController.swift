@@ -8,15 +8,42 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController:
 
+
+    UIViewController {
+
+    @IBOutlet weak var DefaultTipControl: UISegmentedControl!
+    
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
     }
     
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    print("view will appear")
+    DefaultTipControl.selectedSegmentIndex = defaults.integer(forKey:"setting_index")
+    // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("view will disappear")
+        // update current tip index in the settings viewer
+        defaults.set(DefaultTipControl.selectedSegmentIndex, forKey:"defaultTip_index")
+        defaults.synchronize()
+    }
+    
+    @IBAction func defaultTipChange(_ sender: Any) {
+        defaults.set(DefaultTipControl.selectedSegmentIndex, forKey:"defaultTip_index")
+        print(String(DefaultTipControl.selectedSegmentIndex))
+        defaults.synchronize()
+    }
+    
     /*
     // MARK: - Navigation
 
