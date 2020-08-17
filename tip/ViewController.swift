@@ -22,7 +22,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    
+        let recent_bill = defaults.double(forKey: "bill_value")
+        let recent_tip = defaults.double(forKey:"tip_value")
+        let recent_total = defaults.double(forKey:"total_value")
+        billField.text = String(recent_bill)
+        tipLabel.text = String(recent_tip)
+        totalLabel.text = String(recent_total)
     }
 
     @IBAction func onTap(_ sender: Any) {
@@ -35,7 +40,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         print("view will appear")
         // Retrieve default tip percentage from UserDefaults and update tip amount
-        let defaultTip = defaults.integer(forKey:"defaultTip_index")
+        let defaultTip = defaults.integer(forKey:"tip_index")
         tipControl.selectedSegmentIndex = defaultTip
         // Get the bill amount
         let bill = Double(billField.text!) ?? 0
@@ -60,8 +65,8 @@ class ViewController: UIViewController {
         super.viewWillDisappear(animated)
         print("view will disappear")
         // update current tip index in the settings viewer
-        defaults.set(tipControl.selectedSegmentIndex, forKey:"setting_index")
     }
+    
     override func viewDidDisappear(_ animated: Bool) {
            super.viewDidDisappear(animated)
            print("view did disappear")
@@ -71,12 +76,15 @@ class ViewController: UIViewController {
         // Get the bill amount
         let bill = Double(billField.text!) ?? 0
         
+        defaults.set(bill, forKey:"bill_value")
         // Calculate the tip and total
         let tipPercentages = [0.15, 0.18, 0.2]
         
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
+        defaults.set(tipControl.selectedSegmentIndex, forKey:"tip_index")
+        defaults.set(tip, forKey:"tip_value")
         let total = bill + tip
-        
+        defaults.set(total, forKey:"total_value")
         // Update the tip and total labels
         tipLabel.text = String(format: "$%0.2f", tip )
         totalLabel.text = String(format: "$%0.2f", total)

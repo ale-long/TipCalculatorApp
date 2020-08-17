@@ -26,7 +26,7 @@ class SettingsViewController:
     override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     print("view will appear")
-    DefaultTipControl.selectedSegmentIndex = defaults.integer(forKey:"setting_index")
+    DefaultTipControl.selectedSegmentIndex = defaults.integer(forKey:"tip_index")
     // Do any additional setup after loading the view.
     }
     
@@ -34,12 +34,10 @@ class SettingsViewController:
         super.viewWillDisappear(animated)
         print("view will disappear")
         // update current tip index in the settings viewer
-        defaults.set(DefaultTipControl.selectedSegmentIndex, forKey:"defaultTip_index")
-        defaults.synchronize()
     }
     
     @IBAction func defaultTipChange(_ sender: Any) {
-        defaults.set(DefaultTipControl.selectedSegmentIndex, forKey:"defaultTip_index")
+        defaults.set(DefaultTipControl.selectedSegmentIndex, forKey:"tip_index")
         print(String(DefaultTipControl.selectedSegmentIndex))
         defaults.synchronize()
     }
