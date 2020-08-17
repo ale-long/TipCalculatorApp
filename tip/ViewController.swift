@@ -21,11 +21,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         let recent_bill = defaults.double(forKey: "bill_value")
         let recent_tip = defaults.double(forKey:"tip_value")
         let recent_total = defaults.double(forKey:"total_value")
-        billField.text = String(recent_bill)
+        if recent_bill > 0 {
+        billField.text = String(format: "%0.2f",recent_bill)
+        }
         tipLabel.text = String(recent_tip)
         totalLabel.text = String(recent_total)
     }
@@ -39,6 +42,9 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("view will appear")
+        
+        navigationController?.navigationBar.barTintColor = UIColor.cyan
+        
         // Retrieve default tip percentage from UserDefaults and update tip amount
         let defaultTip = defaults.integer(forKey:"tip_index")
         tipControl.selectedSegmentIndex = defaultTip
