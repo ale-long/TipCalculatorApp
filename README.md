@@ -30,7 +30,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Understanding how UserDefaults work and making sure the data is consistent across both screens has been the biggest challenge in creating this app. 
 
 ## License
 
