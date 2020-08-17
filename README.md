@@ -1,6 +1,6 @@
-# Pre-work - Tippy
+# Pre-work - Tip
 
-**Tippy** is a tip calculator application for iOS.
+**Tip** is a tip calculator application for iOS.
 
 Submitted by: **Alex Long**
 
