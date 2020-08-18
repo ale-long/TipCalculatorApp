@@ -1,10 +1,10 @@
-# Pre-work - Tippy
+# Pre-work - Tip
 
-**Tippy** is a tip calculator application for iOS.
+**Tip** is a tip calculator application for iOS.
 
 Submitted by: **Alex Long**
 
-Time spent: **X** hours spent in total
+Time spent: **10** hours spent in total
 
 ## User Stories
 
@@ -16,25 +16,20 @@ The following **required** functionality is complete:
 The following **optional** features are implemented:
 
 * [ ] UI animations
-* [ ] Remembering the bill amount across app restarts (if <10mins)
+* [X] Remembering the bill amount across app restarts (if <10mins) <-- Partially implemented; time feature has not been implemented
 * [ ] Using locale-specific currency and currency thousands separators.
-* [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
-
-The following **additional** features are implemented:
-
-- [ ] List anything else that you can get done to improve the app functionality!
+* [X] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of the tip calculator app:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![Video Walkthrough](tip_demo.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
-## Notes
-
-Describe any challenges encountered while building the app.
+## Notes/Challenges
+Understanding how UserDefaults work and making sure the data is consistent across different screens has been the biggest challenge in creating this app. 
 
 ## License
 
