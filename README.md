@@ -28,9 +28,8 @@ Here's a walkthrough of implemented user stories:
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
-## Notes
-
-Understanding how UserDefaults work and making sure the data is consistent across both screens has been the biggest challenge in creating this app. 
+## Notes/Challenges
+Understanding how UserDefaults work and making sure the data is consistent across different screens has been the biggest challenge in creating this app. 
 
 ## License
 
