@@ -65,6 +65,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("view did appear")
+        billField.becomeFirstResponder()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
