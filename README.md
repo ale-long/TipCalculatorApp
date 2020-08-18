@@ -20,11 +20,11 @@ The following **optional** features are implemented:
 * [ ] Using locale-specific currency and currency thousands separators.
 * [X] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
-## Video Walkthrough
+## Calculator Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of the tip calculator app:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
